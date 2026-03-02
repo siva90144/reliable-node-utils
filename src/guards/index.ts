@@ -17,7 +17,7 @@
  *
  * @example
  * ```js
- * const { isDefined } = require('@my-scope/utils');
+ * const { isDefined } = require('reliable-node-utils');
  * if (isDefined(maybe)) console.log(maybe.toUpperCase());
  * ```
  */
@@ -42,7 +42,7 @@ export function isDefined<T>(value: T | null | undefined): value is T {
  *
  * @example
  * ```js
- * const { isNonEmptyString } = require('@my-scope/utils');
+ * const { isNonEmptyString } = require('reliable-node-utils');
  * if (isNonEmptyString(input)) validate(input);
  * ```
  */
@@ -67,7 +67,7 @@ export function isNonEmptyString(value: unknown): value is string {
  *
  * @example
  * ```js
- * const { isPlainObject } = require('@my-scope/utils');
+ * const { isPlainObject } = require('reliable-node-utils');
  * if (isPlainObject(obj)) Object.keys(obj).forEach(k => process(k, obj[k]));
  * ```
  */

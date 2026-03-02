@@ -14,7 +14,7 @@ const BLOCKED_KEYS = new Set(["__proto__", "prototype", "constructor"]);
  *
  * @example
  * ```ts
- * import { deepMerge } from '@my-scope/utils';
+ * import { deepMerge } from 'reliable-node-utils';
  *
  * const merged = deepMerge({ a: 1, nested: { x: 1 } }, { nested: { y: 2 } });
  * // { a: 1, nested: { x: 1, y: 2 } }
@@ -22,7 +22,7 @@ const BLOCKED_KEYS = new Set(["__proto__", "prototype", "constructor"]);
  *
  * @example
  * ```js
- * const { deepMerge } = require('@my-scope/utils');
+ * const { deepMerge } = require('reliable-node-utils');
  * const config = deepMerge(defaults, userConfig);
  * ```
  */

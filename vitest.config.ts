@@ -21,7 +21,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@my-scope/utils": resolve(__dirname, "./src/index.ts"),
+      "reliable-node-utils": resolve(__dirname, "./src/index.ts"),
     },
   },
 });

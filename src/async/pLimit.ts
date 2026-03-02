@@ -7,7 +7,7 @@
  *
  * @example
  * ```ts
- * import { pLimit } from '@my-scope/utils';
+ * import { pLimit } from 'reliable-node-utils';
  *
  * const limit = pLimit(2);
  * const out = await Promise.all([
@@ -19,7 +19,7 @@
  *
  * @example
  * ```js
- * const { pLimit } = require('@my-scope/utils');
+ * const { pLimit } = require('reliable-node-utils');
  * const limit = pLimit(5);
  * const results = await Promise.all(urls.map(url => limit(() => fetch(url))));
  * ```

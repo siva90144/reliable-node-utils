@@ -1,5 +1,5 @@
 /**
- * @my-scope/utils
+ * reliable-node-utils
  *
  * Resume-grade Node.js utilities: retry, timeout, concurrency, memoize,
  * deepMerge, and runtime guards. ESM + CJS, TypeScript-first.

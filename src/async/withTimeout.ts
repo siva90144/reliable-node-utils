@@ -24,7 +24,7 @@ export interface WithTimeoutOptions {
  *
  * @example
  * ```ts
- * import { withTimeout } from '@my-scope/utils';
+ * import { withTimeout } from 'reliable-node-utils';
  *
  * const data = await withTimeout(fetch('/api/data').then(r => r.json()), 5000);
  * // or
@@ -35,7 +35,7 @@ export interface WithTimeoutOptions {
  *
  * @example
  * ```js
- * const { withTimeout } = require('@my-scope/utils');
+ * const { withTimeout } = require('reliable-node-utils');
  * const result = await withTimeout(longRunningTask(), 3000);
  * ```
  */

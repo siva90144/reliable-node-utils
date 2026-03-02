@@ -1,4 +1,4 @@
-# @my-scope/utils
+# reliable-node-utils
 
 ## 1.0.0
 

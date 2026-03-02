@@ -1,4 +1,4 @@
-# @my-scope/utils
+# reliable-node-utils
 
 Reliable, type-safe utilities for Node.js and TypeScript:
 
@@ -45,7 +45,7 @@ Built in strict TypeScript and published as both **ESM + CJS** with bundled `.d.
 ## Install
 
 ```bash
-npm install @my-scope/utils
+npm install reliable-node-utils
 ```
 
 ## Quick start
@@ -60,7 +60,7 @@ import {
   memoize,
   deepMerge,
   isDefined,
-} from "@my-scope/utils";
+} from "reliable-node-utils";
 
 const limit = pLimit(2);
 
@@ -84,7 +84,7 @@ const clean = arr.filter(isDefined);
 ### JavaScript (CJS)
 
 ```js
-const { retry, withTimeout, pLimit, memoize, deepMerge } = require("@my-scope/utils");
+const { retry, withTimeout, pLimit, memoize, deepMerge } = require("reliable-node-utils");
 
 const limit = pLimit(3);
 
@@ -296,14 +296,14 @@ These classes are exported for `instanceof` checks.
 import {
   generateUniqueFullName,
   InMemoryUniqueValueStore,
-} from "@my-scope/utils";
+} from "reliable-node-utils";
 
 const store = new InMemoryUniqueValueStore();
 const fullName = await generateUniqueFullName({ store });
 ```
 
 ```ts
-import { FakerNameProvider, generateFullName } from "@my-scope/utils";
+import { FakerNameProvider, generateFullName } from "reliable-node-utils";
 
 const provider = new FakerNameProvider();
 const fullName = generateFullName({ provider });
@@ -321,7 +321,7 @@ import {
   CanadaPostAddressProvider,
   ZippopotamAddressProvider,
   getValidAddressByPostalCode,
-} from "@my-scope/utils";
+} from "reliable-node-utils";
 
 const providers = [
   new UspsAddressProvider({ userId: process.env.USPS_USER_ID! }),

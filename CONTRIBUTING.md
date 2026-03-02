@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for considering contributing to `@my-scope/utils`.
+Thanks for considering contributing to `reliable-node-utils`.
 
 ## Setup
 

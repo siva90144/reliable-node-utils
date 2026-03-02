@@ -103,7 +103,7 @@ function computeDelay(
  *
  * @example
  * ```ts
- * import { retry } from '@my-scope/utils';
+ * import { retry } from 'reliable-node-utils';
  *
  * const data = await retry(() => fetchJSON('/api/data'), {
  *   maxAttempts: 5,
@@ -115,7 +115,7 @@ function computeDelay(
  *
  * @example
  * ```js
- * const { retry } = require('@my-scope/utils');
+ * const { retry } = require('reliable-node-utils');
  * const result = await retry(async () => callExternalApi(), { maxAttempts: 3 });
  * ```
  */

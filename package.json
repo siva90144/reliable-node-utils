@@ -1,5 +1,5 @@
 {
-  "name": "@my-scope/utils",
+  "name": "reliable-node-utils",
   "version": "1.0.0",
   "description": "Resume-grade Node.js utilities: retry, timeout, concurrency, memoize, deepMerge, and runtime guards. ESM + CJS, TypeScript-first.",
   "type": "module",

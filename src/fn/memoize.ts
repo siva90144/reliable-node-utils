@@ -32,7 +32,7 @@ interface CacheLookupResult<T> {
  *
  * @example
  * ```ts
- * import { memoize } from '@my-scope/utils';
+ * import { memoize } from 'reliable-node-utils';
  *
  * const getData = memoize(async (id: string) => fetch(`/api/${id}`).then(r => r.json()), {
  *   ttlMs: 60_000,
@@ -43,7 +43,7 @@ interface CacheLookupResult<T> {
  *
  * @example
  * ```js
- * const { memoize } = require('@my-scope/utils');
+ * const { memoize } = require('reliable-node-utils');
  * const heavy = memoize(function (x, y) { return x + y; }, { maxSize: 50 });
  * ```
  */
