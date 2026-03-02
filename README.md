@@ -48,7 +48,24 @@ Built in strict TypeScript and published as both **ESM + CJS** with bundled `.d.
 npm install reliable-node-utils
 ```
 
+## Before you start (address utilities)
+
+Address lookup/verification requires provider credentials:
+
+- US: set `USPS_USER_ID` and use `UspsAddressProvider`
+- Canada: set `CANADA_POST_KEY` and use `CanadaPostAddressProvider`
+
+Without configured providers/keys, address methods cannot verify real addresses.
+
 ## Quick start
+
+### Most common picks
+
+- API calls: `retry` + `withTimeout`
+- Concurrency: `pLimit`
+- Derived caching: `memoize`
+- Test data names: `generateFullName` or `generateUniqueFullName`
+- Real address validation: `getValidAddressByPostalCode` / `verifyAddress` with provider keys
 
 ### TypeScript (ESM)
 
@@ -343,6 +360,13 @@ For Canada, use `CanadaPostAddressProvider` for official Canada Post-backed
 validation. `ZippopotamAddressProvider` remains useful as a lightweight fallback
 for postal-code consistency checks.
 
+### Environment variables example
+
+```bash
+export USPS_USER_ID="your-usps-user-id"
+export CANADA_POST_KEY="your-canadapost-key"
+```
+
 ## Utility domains
 
 ### String
@@ -355,7 +379,10 @@ for postal-code consistency checks.
 | `isNullOrEmptyString` | Null/undefined/empty-after-trim check |
 | `snakeToPascalCase` | Convert `snake_case` to `PascalCase` |
 
-Legacy aliases: `formatStringValue`, `convertToCamelCase`.
+Legacy aliases:
+
+- `formatStringValue` -> `replaceTemplateValues`
+- `convertToCamelCase` -> `snakeToPascalCase` (legacy name retained; output is PascalCase)
 
 ### Random
 
