@@ -38,7 +38,16 @@ export {
 
 export { updateJsonValues, updateJsonData } from "./json/index.js";
 
-export { getRelativeDate, getDate, type RelativeDateToken } from "./date/index.js";
+export {
+  getRelativeDate,
+  getDate,
+  getCurrentTimeInTimeZone,
+  isValidTimeZone,
+  getCurrentTimeInEst,
+  printCurrentTimeInEST,
+  EST_TIME_ZONE,
+  type RelativeDateToken,
+} from "./date/index.js";
 
 export { renameMapKey, updateKey } from "./collections/index.js";
 

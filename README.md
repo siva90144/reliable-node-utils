@@ -407,8 +407,50 @@ Legacy alias: `updateJsonData`.
 | Function | Purpose |
 | --- | --- |
 | `getRelativeDate` | Format Today / Yesterday / Year(-1) with pattern |
+| `getCurrentTimeInTimeZone` | Format current time as `HH:mm:ss` for any IANA timezone |
+| `isValidTimeZone` | Validate IANA timezone support in current runtime |
+| `getCurrentTimeInEst` | Convenience helper for `America/New_York` |
 
-Legacy alias: `getDate`.
+Legacy aliases: `getDate`, `printCurrentTimeInEST`.
+
+```ts
+import {
+  getDate,
+  getCurrentTimeInTimeZone,
+  getCurrentTimeInEst,
+  isValidTimeZone,
+} from "reliable-node-utils";
+
+// Relative date formatting
+const today = getDate("Today", "yyyy-MM-dd"); // e.g. 2026-03-06
+
+// Any IANA timezone
+const utcTime = getCurrentTimeInTimeZone("UTC"); // e.g. 15:04:05
+const indiaTime = getCurrentTimeInTimeZone("Asia/Kolkata"); // e.g. 20:34:05
+
+// Validate timezone before formatting
+const zone = "America/New_York";
+const safeTime = isValidTimeZone(zone) ? getCurrentTimeInTimeZone(zone) : "invalid-timezone";
+
+// EST convenience helper (America/New_York)
+const estTime = getCurrentTimeInEst(); // e.g. 10:04:05
+```
+
+```js
+const {
+  getCurrentTimeInTimeZone,
+  getCurrentTimeInEst,
+  isValidTimeZone,
+} = require("reliable-node-utils");
+
+const zone = "Europe/London";
+const time = isValidTimeZone(zone)
+  ? getCurrentTimeInTimeZone(zone)
+  : "invalid-timezone";
+
+console.log("London:", time);
+console.log("Eastern:", getCurrentTimeInEst());
+```
 
 ### Collections
 
